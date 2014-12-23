@@ -6,7 +6,7 @@ template<typename Object>
 class MyStack {
 public:
   MyStack();
-  MyStack(const MyStack &rhs);
+  //MyStack(const MyStack &rhs);
   ~MyStack();
   MyStack<Object> & operator= (const MyStack<Object> &rhs);
   int size() const { return theSize; }
@@ -23,19 +23,6 @@ private:
 template<typename Object>
 MyStack<Object>::MyStack() {
   init();
-}
-
-template<typename Object>
-MyStack<Object>::MyStack(const MyStack<Object> &rhs) {
-  init();
-  theSize = rhs.size();
-  Node<Object> *curr = head;
-  Node<Object> *curr_rhs = rhs.head; 
-  for (int i = 0; i < theSize; ++i) {
-    curr->next = new Node<Object>(curr_rhs->data, nullptr);
-    curr = curr->next;
-    curr_rhs = curr_rhs->next; 
-  }   
 }
 
 template<typename Object>
