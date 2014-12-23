@@ -48,7 +48,7 @@ MyStack<Object> & MyStack<Object>::operator= (const MyStack<Object> &rhs) {
 template<typename Object>
 MyStack<Object>::~MyStack() {
   Node<Object> *next; 
-  while (!empty()) {
+  while (head) {
     next = head->next;
     delete head;
     head = next; 
