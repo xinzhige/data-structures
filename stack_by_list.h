@@ -80,11 +80,11 @@ void MyStack<Object>::pop_out() {
 template<typename Object>
 void MyStack<Object>::push_in(const Object &x) {
   try {  
-    Node<Object> *y = new Node<Object>(x, head); 
-    if (!y) {  
+    Node<Object> *p = new Node<Object>(x, head); 
+    if (!p) {  
       throw std::out_of_range("No position to be inserted!");
     } 
-    head = y;
+    head = p;
     ++theSize;
   }
   catch (const std::out_of_range& oor) {
