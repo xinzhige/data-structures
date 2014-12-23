@@ -30,7 +30,7 @@ MyStack<Object>::MyStack(const MyStack<Object> &rhs) {
   init();
   theSize = rhs.size();
   Node<Object> *curr = head;
-  Node<Object> *curr_rhs = rhs; 
+  Node<Object> *curr_rhs = rhs.head; 
   for (int i = 0; i < theSize; ++i) {
     curr->next = new Node<Object>(curr_rhs->data, nullptr);
     curr = curr->next;
