@@ -27,6 +27,7 @@ public:
   void post_order_iter(void(*visit) (BinaryTreeNode<Object> *r)) {
     post_order_iter(visit, root);
   }
+  int height() const { return height(root); }
 private:
   BinaryTreeNode<Object> *root;
   void pre_order(void (*visit) (BinaryTreeNode<Object> *r), BinaryTreeNode<Object> *t);
@@ -35,6 +36,7 @@ private:
   void in_order_iter(void (*visit) (BinaryTreeNode<Object> *r), BinaryTreeNode<Object> *t);
   void post_order(void (*visit) (BinaryTreeNode<Object> *r), BinaryTreeNode<Object> *t);
   void post_order_iter(void (*visit) (BinaryTreeNode<Object> *r), BinaryTreeNode<Object> *t);
+  int height(BinaryTreeNode<Object> *r) const;
 };
 
 template <typename Object>
@@ -128,4 +130,16 @@ void BinaryTree<Object>::post_order_iter(void(*visit) (BinaryTreeNode<Object> *r
       }
     }
   } 
+}
+
+template <typename Object>
+int BinaryTree<Object>::height(BinaryTreeNode<Object> *r) const {
+  if (!r) { return 0; }
+  int left_height =  height(r->left);
+  int right_height = height(r->right);
+  if (left_height > right_height) {
+    return left_height + 1;
+  } else {
+    return right_height + 1;
+  }
 }
