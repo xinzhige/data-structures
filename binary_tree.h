@@ -28,7 +28,7 @@ public:
     post_order_iter(visit, root);
   }
   int height() const { return height(root); }
-private:
+protected:
   BinaryTreeNode<Object> *root;
   void pre_order(void (*visit) (BinaryTreeNode<Object> *r), BinaryTreeNode<Object> *t);
   void pre_order_iter(void (*visit) (BinaryTreeNode<Object> *r), BinaryTreeNode<Object> *t);
