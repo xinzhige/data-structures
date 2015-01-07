@@ -1,6 +1,14 @@
 #include "trie_node.h"
 #include <cstring>
 
+template <int Size>
+class Index {
+public: 
+  int operator[] (char vchar) {
+    return vchar % Size;
+  }
+};
+
 template <int Size, typename Object>
 class trie {
 public:
@@ -181,11 +189,3 @@ int trie<Size, Object>::sizeNoneRedundant(pNode ptr) {
   }
   return result;
 }
-
-template <int Size>
-class Index {
-public: 
-  int operator[] (char vchar) {
-    return vchar % Size;
-  }
-};
