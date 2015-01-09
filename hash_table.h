@@ -50,6 +50,7 @@ bool HashTable<Object>::insert(const Object & x) {
   if (find(begin(whichList), end(whichList), x) != end(whichList)) {
     return false;
   }
+  whichList.push_back(x);
   currentSize += 1;
   if (currentSize > theLists.size()) {
     rehash();
