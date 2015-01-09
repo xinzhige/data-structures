@@ -68,6 +68,7 @@ template<typename Object>
 void HashTable<Object>::rehash() {
   vector<list<Object> > oldLists = theLists;
   // create new doubled-sized, empty table
+  // TODO: to create a prime number that is first after 2 * theLists.size()
   theLists.resize(2 * theLists.size());
   for (auto & thisList : theLists) {
     thisList.clear();
