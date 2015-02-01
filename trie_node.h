@@ -14,5 +14,5 @@ public:
   }
   int terminableSize; //store the number of words that end at this node
   int nodeSize;  // store the number of children of this node
-  trieNode * children[Size];
+  trieNode *children[Size];
 };
