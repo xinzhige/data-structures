@@ -50,15 +50,14 @@ private:
 template <int Size, typename Object>
 void trie<Size, Object>::clear_node(pNode curr) {
   for (int i = 0; i < Size; ++i) {
-    if (curr->children[i] == nullptr) {
-      continue;
-    }
-    clear_node(curr->children[i]);
-    delete curr->children[i];
-    curr->children[i] = nullptr;
-    curr->nodeSize -= 1;
-    if (curr->nodeSize == 0) {
-      break;
+    if (curr->children[i]) {
+      clear_node(curr->children[i]);
+      delete curr->children[i];
+      curr->children[i] = nullptr;
+      curr->nodeSize -= 1;
+      if (curr->nodeSize == 0) {
+        break;
+      }
     }
   }
 }
