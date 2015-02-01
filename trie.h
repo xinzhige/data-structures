@@ -1,5 +1,5 @@
-#include "trie_node.h"
 #include <cstring>
+#include "trie_node.h"
 
 template <int Size>
 class Index {
