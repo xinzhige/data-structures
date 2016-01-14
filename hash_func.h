@@ -1,3 +1,6 @@
+#ifndef HASH_FUNC_H_
+#define HASH_FUNC_H_
+
 // keys are strings
 #include <string>
 
@@ -13,3 +16,5 @@ public:
     return hashVal;
   }
 };
+
+#endif
