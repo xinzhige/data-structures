@@ -1,3 +1,4 @@
+#include "max_heap.h"
 #include <assert.h>
 
 template <typename Object>
