@@ -1,5 +1,5 @@
-#include "max_heap.h"
 #include <assert.h>
+#include "max_heap.h"
 
 template <typename Object>
 MaxHeap<Object>::MaxHeap(int MaxHeapSize) {
