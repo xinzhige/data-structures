@@ -1,5 +1,5 @@
-#include "binary_tree.h"
 #include <stack>
+#include "binary_tree.h"
 
 template <typename Object>
 void BinaryTree<Object>::make_tree(const Object &elem, BinaryTree<Object> &l, BinaryTree<Object> &r) {
