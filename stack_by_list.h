@@ -1,5 +1,5 @@
-#ifndef FOO_BAR_BAZ_H_
-#define FOO_BAR_BAZ_H_
+#ifndef STACK_BY_LIST_H_
+#define STACK_BY_LIST_H_
 
 #include "list_node.h"
 
