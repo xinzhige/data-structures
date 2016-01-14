@@ -1,3 +1,6 @@
+#ifndef MY_VECTOR_H_
+#define MY_VECTOR_H_
+
 template <typename Object>
 
 class MyVector {
@@ -63,3 +66,5 @@ private:
   int theCapacity;
   Object *objects; 
 };
+
+#endif
