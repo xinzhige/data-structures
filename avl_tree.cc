@@ -1,3 +1,5 @@
+#include "avl_tree.h"
+
 template <typename Object>
 AVLTree<Object>::AVLTree(): root(nullptr) { }
 
