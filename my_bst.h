@@ -1,5 +1,6 @@
 #ifndef MY_BST_H_
 #define MY_BST_H_
+
 #include "binary_tree.h"
 
 template <typename Object, typename Obj>
