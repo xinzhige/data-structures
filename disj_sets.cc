@@ -1,5 +1,5 @@
-#include "disj_sets.h"
 #include <vector>
+#include "disj_sets.h"
 
 int DisjSets::find(int x) {
   if (s[x] < 0) {
