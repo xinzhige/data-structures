@@ -1,3 +1,8 @@
+#ifndef BINARY_TREE_H_
+#define BINARY_TREE_H_
+
+#endif
+
 #include "binary_tree_node.h"
 #include <stack>
 
