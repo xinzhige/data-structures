@@ -1,3 +1,6 @@
+#ifndef LIST_NODE_H_
+#define LIST_NODE_H_
+
 template<typename Object>
 class Node {
 public:
@@ -5,3 +8,5 @@ public:
   Object data;
   Node<Object> *next;
 };
+
+#endif
