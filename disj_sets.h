@@ -1,3 +1,8 @@
+#ifndef DISJ_SETS_H_
+#define  DISJ_SETS_H_
+
+
+
 #include <vector>
 
 class DisjSets {
@@ -37,3 +42,5 @@ void DisjSets::unionSets(int root1, int root2) {
     s[root2] = root1;
   } 
 }
+
+#endif
