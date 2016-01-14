@@ -1,3 +1,6 @@
+#ifndef BINARY_TREE_NODE_H_
+#define BINARY_TREE_NODE_H_
+
 template <typename Object>
 class BinaryTreeNode {
 public:
@@ -16,3 +19,5 @@ public:
   BinaryTreeNode<Object> *left;
   BinaryTreeNode<Object> *right; 
 };
+
+#endif
