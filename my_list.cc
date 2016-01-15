@@ -119,7 +119,7 @@ MyList<Object> & MyList<Object>::delete_nodes(const Object &x) {
     delete tmp;
   }
   head = curr;
-  if (curr != nullptr) {
+  if (curr == nullptr) {
     return *this;
   }
   while (curr->next) {
