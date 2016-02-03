@@ -40,6 +40,7 @@ void MyVector<Object>::reserve(int newCapacity) {
   std::swap(objects, newArray);
   delete []newArray;
 }
+
 template <typename Object>
 void MyVector<Object>::push_back(const Object &x) {
   if (theSize == theCapacity) {
