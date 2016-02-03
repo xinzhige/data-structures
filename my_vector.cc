@@ -57,23 +57,3 @@ template <typename Object>
 Object & MyVector<Object>::operator[](int index) { 
   return objects[index]; 
 }
-
-template <typename Object>   
-const Object & MyVector<Object>::operator[](int index) const { 
-  return objects[index];
-}
-
-template <typename Object>
-bool MyVector<Object>::empty() const {
-  return size() == 0; 
-}
-
-template <typename Object>
-int MyVector<Object>::size() const { 
-  return theSize; 
-}
-
-template <typename Object>
-int MyVector<Object>::capacity() const {
-  return theCapacity;
-}
